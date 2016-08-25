@@ -6,7 +6,7 @@
 	border: 1px solid;
 	cursor: pointer;
 	border-color: var(--color-highlighted);
-	position: absolute 13px 50px * *;
+	position: absolute 16px 50px * *;
 	color: var(--color-highlighted);
 	text: center 10px 27px nowrap;
 	opacity: .6;
@@ -15,6 +15,10 @@
 
 	&:hover {
 		opacity: 1;
+	}
+
+	@media (--tablet-horizontal-max) {
+		right: 20px;
 	}
 
 	@media (--mobile) {

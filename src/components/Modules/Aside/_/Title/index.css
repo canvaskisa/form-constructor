@@ -4,6 +4,7 @@
 	margin: 0;
 	size: 100% 55px;
 	padding: 0 20px;
+	overflow: hidden;
 	color: var(--color-text);
 	text: 700 15px 15px nowrap;
 	background-color: var(--color-border);
@@ -15,12 +16,14 @@
 
 .editable {
 	height: 55px;
+	padding-right: 18px;
 	position: relative;
 }
 
 .value {
 	color: var(--color-text);
 	text: 700 15px 55px nowrap;
+	overflow: hidden;
 }
 
 .input {
