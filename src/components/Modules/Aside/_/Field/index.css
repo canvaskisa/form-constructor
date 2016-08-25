@@ -33,7 +33,7 @@
 	background-color: transparent;
 	outline: 0;
 	padding: 0;
-	text: center 10px 27px;
+	text: center 10px nowrap;
 	color: var(--color-text-faint);
 	cursor: pointer;
 	transition: color .3s ease 0s, border-color .3s ease 0s;

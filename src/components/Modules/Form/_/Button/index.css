@@ -8,7 +8,7 @@
 	border-color: var(--color-highlighted);
 	position: absolute 16px 50px * *;
 	color: var(--color-highlighted);
-	text: center 10px 27px nowrap;
+	text: center 10px nowrap;
 	opacity: .6;
 	transition: opacity .3s ease 0s;
 	will-change: opacity;
