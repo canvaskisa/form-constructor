@@ -9,7 +9,7 @@
 		0 1px 0 0 var(--color-border) inset;
 
 	& * {
-		visibility: inherit;
+		visibility: inherit !important;
 	}
 }
 
