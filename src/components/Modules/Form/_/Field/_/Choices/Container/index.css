@@ -1,0 +1,13 @@
+@import 'config.css';
+
+.root {
+	float: left;
+	width: 200px;
+	padding-right: 20px;
+
+	@media (--mobile) {
+		width: 100%;
+		padding-right: 0;
+		margin-bottom: 5px;
+	}
+}

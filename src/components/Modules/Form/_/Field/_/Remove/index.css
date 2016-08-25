@@ -1,0 +1,13 @@
+@import 'config.css';
+
+.root {
+	color: var(--color-error);
+	text: 10px 24px;
+	cursor: pointer;
+	float: left;
+
+	@media (--mobile) {
+		float: right;
+		text-align: right;
+	}
+}

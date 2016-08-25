@@ -1,0 +1,14 @@
+@import 'config.css';
+
+.button {
+	opacity: .6;
+	cursor: pointer;
+	color: var(--color-highlighted);
+	transition: opacity .3s ease 0s;
+	will-change: opacity;
+	text: 10px 24px nowrap;
+
+	&:hover {
+		opacity: 1;
+	}
+}

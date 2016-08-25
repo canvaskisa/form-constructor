@@ -1,0 +1,30 @@
+@import 'config.css';
+
+.root {
+	z-index: 1000;
+	background-color: #ffffff;
+	position: absolute 0 * * 0;
+	size: var(--width-aside) 100%;
+	box-shadow: 1px 0 0 0 var(--color-border);
+
+	@media (--tablet-horizontal-max) {
+		transform: translateX(-100%);
+		transition: transform .3s ease 0s;
+
+		&.shown {
+			transform: translateX(0);
+		}
+	}
+
+	@media (--mobile) {
+		max-width: 100%;
+	}
+}
+
+.container {
+	padding: 0 50px;
+}
+
+.fields {
+	clear: fix;
+}

@@ -1,0 +1,13 @@
+@import 'config.css';
+
+.root {
+	overflow: hidden;
+	color: var(--color-text);
+	text: 700 15px 1.3 nowrap;
+
+	@media (--mobile) {
+		padding-left: 55px;
+		height: 55px;
+		line-height: 57px;
+	}
+}

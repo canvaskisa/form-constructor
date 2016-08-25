@@ -1,0 +1,27 @@
+:root {
+	/* Fonts */
+	--sans-serif: 'Open Sans';
+
+	/* Colors */
+	--color-border: #e5e5e5;
+	--color-border-light: #cccccc;
+	--color-text: #4f4f4f;
+	--color-text-faint: #bfbfbf;
+	--color-highlighted: #7d88d4;
+	--color-background: #fafafa;
+	--color-error: #ff8ca0;
+
+	/* Sizes */
+	--width-aside: 400px;
+	--max-width-form: 780px;
+}
+
+@custom-media --desktop-min screen and (min-width: 1281px);
+@custom-media --tablet-horizontal-max screen and (max-width: 1280px);
+@custom-media --tablet-horizontal-only screen and (max-width: 1280px) and (min-width: 961px);
+@custom-media --tablet-horizontal-min screen and (min-width: 961px);
+@custom-media --tablet-vertical-max screen and (max-width: 960px);
+@custom-media --tablet-vertical-only screen and (max-width: 960px) and (min-width: 721px);
+@custom-media --tablet-vertical-min screen and (min-width: 721px);
+@custom-media --tablet-only screen and (min-width: 721px) and (max-width: 1200px);
+@custom-media --mobile screen and (max-width: 720px);

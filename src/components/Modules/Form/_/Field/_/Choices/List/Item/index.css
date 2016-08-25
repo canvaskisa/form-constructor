@@ -1,0 +1,64 @@
+@import 'config.css';
+
+.root {
+	size: 100% 24px;
+	position: relative;
+}
+
+.checkbox,
+.radio,
+.select {
+	padding-left: 20px;
+
+	&::before {
+		content: '';
+		position: absolute 5px * * 0;
+	}
+}
+
+.checkbox::before {
+	size: 12px;
+	border: 1px solid;
+	border-color: var(--color-border);
+}
+
+.radio::before {
+	size: 12px;
+	border-radius: 100%;
+	border: 1px solid;
+	border-color: var(--color-border);
+}
+
+.select::before {
+	size: 8px;
+	top: 8px;
+	left: 3px;
+	border-radius: 100%;
+	background-color: var(--color-border);
+}
+
+.root .editable {
+	min-height: 24px;
+	max-width: 100%;
+	display: inline-block;
+	vertical-align: top;
+	position: relative;
+	padding-right: 30px;
+	overflow: hidden;
+}
+
+.input {
+	border-radius: 4px;
+	border: 1px solid;
+	border-color: var(--color-border-light);
+	color: var(--color-text-faint);
+	size: 100% 24px;
+	padding: 0 7px;
+	text: 11px 24px nowrap;
+}
+
+.value {
+	color: var(--color-text-faint);
+	text: 11px 24px nowrap;
+	overflow: hidden;
+}

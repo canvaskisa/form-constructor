@@ -1,0 +1,25 @@
+@import 'config.css';
+
+.root {
+	size: 100px 27px;
+	border-radius: 4px;
+	border: 1px solid;
+	cursor: pointer;
+	border-color: var(--color-highlighted);
+	position: absolute 13px 50px * *;
+	color: var(--color-highlighted);
+	text: center 10px 27px nowrap;
+	opacity: .6;
+	transition: opacity .3s ease 0s;
+	will-change: opacity;
+
+	&:hover {
+		opacity: 1;
+	}
+
+	@media (--mobile) {
+		position: static;
+		size: 100% 30px;
+		margin-top: 10px;
+	}
+}

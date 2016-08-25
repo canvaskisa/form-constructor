@@ -1,0 +1,44 @@
+@import 'config.css';
+
+.root {
+	margin-top: 20px;
+
+	@media (--tablet-vertical-min) {
+		padding-top: 20px;
+		border-top: 1px solid var(--color-border);
+	}
+}
+
+.header {
+	overflow: hidden;
+	padding-bottom: 10px;
+
+	@media (--mobile) {
+		display: none;
+	}
+}
+
+.td {
+	@media (--tablet-vertical-min) {
+		color: var(--color-text);
+		text: left uppercase 10px 12px nowrap;
+		float: left;
+
+		&:first-child {
+			padding-left: 25px;
+			width: 350px;
+		}
+
+		&:nth-child(2) {
+			width: 200px;
+		}
+
+		&:last-child {
+			width: 100px;
+		}
+	}
+
+	@media (--mobile) {
+		display: none;
+	}
+}

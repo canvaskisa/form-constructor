@@ -1,0 +1,38 @@
+@import 'config.css';
+
+.root {
+	padding-top: 54px;
+	min-height: 100vh;
+
+	@media (--desktop-min) {
+		padding-left: calc(var(--width-aside) + 50px);
+	}
+
+	@media (--mobile) {
+		padding-top: 0;
+	}
+}
+
+.container {
+	size: 100%;
+	margin: 0 auto;
+	padding: 20px 50px;
+	position: relative;
+	background-color: #ffffff;
+	min-height: calc(100vh - 55px);
+	max-width: var(--max-width-form);
+	border-top: 1px solid var(--color-border);
+	border-left: 1px solid var(--color-border);
+	border-right: 1px solid var(--color-border);
+
+	@media (--tablet-horizontal-max) {
+		padding: * 20px;
+		max-width: calc(var(--max-width-form) - 60px);
+	}
+
+	@media (--mobile) {
+		min-height: 100vh;
+		border: 0;
+		padding-top: 0;
+	}
+}

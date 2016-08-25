@@ -1,0 +1,20 @@
+@import 'config.css';
+
+.root {
+	float: left;
+	cursor: move;
+	size: 12px 24px;
+	overflow: hidden;
+	margin-right: 14px;
+	background-repeat: repeat;
+	background-size: 12px 24px;
+	background-position: top center;
+	background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAxMiAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMTIgMGgtMnYyLjE1MWgyVjB6bTAgMTAuNzU1aC0ydjIuMTUxaDJ2LTIuMTV6bTAgMTAuNzU2aC0ydjIuMTVoMnYtMi4xNXpNMiAwSDB2Mi4xNTFoMlYwem0wIDEwLjc1NUgwdjIuMTUxaDJ2LTIuMTV6bTAgMTAuNzU2SDB2Mi4xNWgydi0yLjE1eiIgZmlsbD0iI2NjY2NjYyIgZmlsbC1ydWxlPSJldmVub2RkIi8+PC9zdmc+');
+
+	@media (--mobile) {
+		float: none;
+		size: 100% 20px;
+		margin-right: 0;
+		background-size: 18px 24px;
+	}
+}

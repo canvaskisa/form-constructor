@@ -1,0 +1,35 @@
+{
+	"fields": [{
+		"kind": "text",
+		"title": "Single-line text"
+	}, {
+		"multi": true,
+		"kind": "radio",
+		"title": "Radio button"
+	}, {
+		"multi": true,
+		"kind": "checkbox",
+		"title": "Checkboxes"
+	}, {
+		"multi": true,
+		"kind": "select",
+		"title": "Select"
+	}, {
+		"kind": "file",
+		"title": "File upload"
+	}, {
+		"kind": "textarea",
+		"title": "Paragraph text"
+	}],
+	"views": [{
+		"view": "fields",
+		"type": "Custom fields",
+		"caption": "Select fields will be added to form.",
+		"title": "Add Custom Field"
+	}, {
+		"view": "description",
+		"type": "Description (optional)",
+		"caption": "Optional form description",
+		"title": "Form Description"
+	}]
+}

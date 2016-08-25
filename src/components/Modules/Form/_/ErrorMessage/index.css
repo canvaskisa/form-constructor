@@ -1,0 +1,12 @@
+@import 'config.css';
+
+.root {
+	margin: 20px 0;
+	padding: 0 25px;
+	size: 100% 55px;
+	border-radius: 4px;
+	background-color: #f2dede;
+	border: 1px solid #ebcccc;
+	text: 12px 53px;
+	color: #973133;
+}

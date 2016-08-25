@@ -1,0 +1,14 @@
+@import 'config.css';
+
+.root {
+	width: 100%;
+	min-height: 100vh;
+	position: relative;
+	background-color: var(--color-background);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+
+	@media (--mobile) {
+		min-height: 430px;
+	}
+}

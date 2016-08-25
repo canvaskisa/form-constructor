@@ -1,0 +1,26 @@
+@import 'config.css';
+
+.root {
+	float: left;
+	size: 67px 24px;
+	padding-top: 6px;
+
+	@media (--mobile) {
+		width: 50%;
+		position: relative;
+		padding-left: 60px;
+
+		&::before {
+			content: 'Required?: ';
+			color: var(--color-text);
+			text: 11px 24px nowrap;
+			position: absolute -1px * * 0;
+		}
+	}
+}
+
+.checkbox {
+	size: 12px;
+	cursor: pointer;
+	appearance: checkbox;
+}

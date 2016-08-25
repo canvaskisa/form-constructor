@@ -1,0 +1,32 @@
+@import 'config.css';
+
+.root {
+	float: left;
+	display: block;
+	size: 50% 52px;
+	border-bottom: 1px solid var(--color-border);
+}
+
+.button {
+	display: block;
+	cursor: pointer;
+	size: 100% 52px;
+	color: var(--color-text-faint);
+	text: center 9px 52px nowrap;
+	border-bottom: 2px solid transparent;
+	transition:
+		color .3s ease 0s,
+		border-bottom-color .3s ease 0s;
+	will-change:
+		color,
+		border-bottom-color;
+
+	&:hover {
+		color: var(--color-highlighted);
+	}
+
+	@nest .active & {
+		color: var(--color-highlighted);
+		border-bottom-color: var(--color-highlighted);
+	}
+}

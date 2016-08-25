@@ -1,0 +1,26 @@
+@import 'config.css';
+
+.root {
+	margin: 22px 0 20px;
+	overflow: hidden;
+}
+
+.caption {
+	color: var(--color-text-faint);
+	text-transform: uppercase;
+}
+
+.value {
+	color: var(--color-text);
+}
+
+.root,
+.caption,
+.value {
+	text: 10px 12px nowrap;
+}
+
+.caption,
+.value {
+	display: inline;
+}

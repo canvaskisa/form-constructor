@@ -1,0 +1,13 @@
+@import 'config.css';
+
+.root {
+	display: inline-block;
+	vertical-align: top;
+	border-radius: 4px;
+	border: 1px solid;
+	border-color: var(--color-border-light);
+	color: var(--color-text-faint);
+	text: 10px 22px;
+	padding: 0 7px;
+	height: 24px;
+}

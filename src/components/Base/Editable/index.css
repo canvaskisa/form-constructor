@@ -1,0 +1,63 @@
+@import 'config.css';
+
+.root {
+	display: inline-block;
+	vertical-align: top;
+	position: relative;
+	padding-right: 18px;
+}
+
+.root.removeable {
+	padding-right: 28px;
+	position: relative;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.value {
+	display: block;
+}
+
+.edit {
+	size: 8px 12px;
+	display: block;
+	position: absolute 50% 0 * *;
+	margin-top: calc(12px / 2 * -1);
+
+	@nest .removeable & {
+		right: 15px;
+	}
+}
+
+.icon {
+	size: 100%;
+	fill: #828282;
+	display: block;
+	cursor: pointer;
+
+	@nest .edit:hover & {
+		fill: var(--color-highlighted);
+	}
+
+	@nest .remove:hover & {
+		fill: var(--color-highlighted);
+	}
+}
+
+.input {
+	border-radius: 4px;
+	border: 1px solid;
+	border-color: var(--color-border-light);
+	line-height: inherit;
+	font-size: inherit;
+	padding: 0 7px;
+	outline: 0;
+}
+
+.remove {
+	size: 11px 13px;
+	display: block;
+	position: absolute 50% 0 * *;
+	margin-top: calc(13px / 2 * -1);
+}
+

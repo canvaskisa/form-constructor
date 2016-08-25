@@ -1,0 +1,52 @@
+@import 'config.css';
+
+.root {
+	all: initial;
+	display: none;
+
+	@media (--tablet-horizontal-max) {
+		size: 55px;
+		z-index: 200;
+		display: block;
+		cursor: pointer;
+		position: absolute 0 -55px * *;
+		background-color: var(--color-border);
+		transition: transform .3s ease 0s;
+		will-change: transform;
+
+		&.open {
+			transform: translateX(-100%);
+		}
+	}
+}
+
+.line {
+	size: 17px 2px;
+	background-color: var(--color-text);
+	position: absolute 50% * * 50%;
+	transform: translate(-50%, -50%);
+	transition: opacity .3s ease 0s, transform .3s ease 0s;
+	will-change: opacity, transform;
+
+	&:first-child {
+		margin-top: -6px;
+	}
+
+	&:last-child {
+		margin-top: 6px;
+	}
+}
+
+.open .line {
+	&:first-child {
+		transform: rotate(-45deg) translate(-50%, -50%);
+	}
+
+	&:nth-child(2) {
+		opacity: 0;
+	}
+
+	&:last-child {
+		transform: rotate(45deg) translate(-55%, -25%);
+	}
+}

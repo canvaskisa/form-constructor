@@ -1,0 +1,5 @@
+@import 'config.css';
+
+.root {
+	font-family: var(--sans-serif);
+}
