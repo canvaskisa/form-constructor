@@ -4,6 +4,7 @@
 	width: 100%;
 	min-height: 100vh;
 	position: relative;
+	font-family: 'Open Sans';
 	background-color: var(--color-background);
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;

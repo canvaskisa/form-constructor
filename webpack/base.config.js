@@ -10,7 +10,6 @@ module.exports = {
 		require('postcss-import')({path: context}),
 		require('postcss-short'),
 		require('postcss-clearfix'),
-		require('postcss-font-magician'),
 		require('postcss-autoreset')({reset: {
 			all: 'initial',
 			boxSizing: 'border-box',
@@ -18,6 +17,7 @@ module.exports = {
 			display: 'block'
 		}}),
 		require('postcss-initial'),
+		require('postcss-font-magician'),
 		require('postcss-cssnext'),
 		require('css-mqpacker')
 	],
