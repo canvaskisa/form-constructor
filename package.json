@@ -18,7 +18,7 @@
     "deploy": "gh-pages -d dist",
     "predeploy": "npm run build",
     "precommit": "npm test",
-    "postpush": "npm run deploy"
+    "prepush": "npm run deploy"
   },
   "keywords": [],
   "author": "Aleksandr Yakunichev <canvaskisa@gmail.com> (https://github.com/canvaskisa)",
