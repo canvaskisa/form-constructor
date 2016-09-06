@@ -13,6 +13,7 @@
     "test": "env NODE_PATH=src nyc ava",
     "test:watch": "npm test -- -w",
     "pretest": "npm run lint",
+    "deploy": "gh-pages -d dist",
     "predeploy": "npm run build",
     "precommit": "npm test",
     "prepush": "npm run deploy",
