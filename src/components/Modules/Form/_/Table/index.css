@@ -21,7 +21,7 @@
 .td {
 	@media (--tablet-vertical-min) {
 		color: var(--color-text);
-		text: left uppercase 10px 12px nowrap;
+		text: 600 left uppercase 12px 12px nowrap;
 		float: left;
 
 		&:first-child {

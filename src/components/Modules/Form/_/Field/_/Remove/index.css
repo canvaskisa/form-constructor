@@ -1,13 +1,23 @@
 @import 'config.css';
 
 .root {
-	color: var(--color-error);
-	text: 10px 24px;
 	cursor: pointer;
-	float: left;
+	float: right;
+	position: relative;
+	size: 18px 24px;
+}
 
-	@media (--mobile) {
-		float: right;
-		text-align: right;
+.icon {
+	cursor: pointer;
+	display: block;
+	margin-top: 1px;
+	height: 18px;
+	transition: fill .3s ease 0s;
+	position: absolute 50% 50%;
+	transform: translate(-50%, -50%);
+	fill: var(--color-text-faint);
+
+	@nest .root:hover & {
+		fill: var(--color-error);
 	}
 }

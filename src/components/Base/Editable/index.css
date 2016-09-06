@@ -1,17 +1,14 @@
 @import 'config.css';
 
 .root {
-	display: inline-block;
-	vertical-align: top;
+	display: block;
 	position: relative;
-	padding-right: 18px;
+	padding-right: 20px;
 }
 
 .root.removeable {
-	padding-right: 28px;
+	padding-right: 40px;
 	position: relative;
-	display: inline-block;
-	vertical-align: top;
 }
 
 .value {
@@ -19,28 +16,31 @@
 }
 
 .edit {
-	size: 8px 12px;
+	size: 18px 24px;
 	display: block;
 	position: absolute 50% 0 * *;
-	margin-top: calc(12px / 2 * -1);
+	margin-top: -12px;
 
 	@nest .removeable & {
-		right: 15px;
+		right: 20px;
 	}
 }
 
 .icon {
-	size: 100%;
-	fill: #828282;
+	height: 18px;
+	fill: var(--color-text-faint);
 	display: block;
 	cursor: pointer;
+	position: absolute 50% * * 50%;
+	transform: translate(-50%, -50%);
+	transition: fill .3s ease 0s;
 
 	@nest .edit:hover & {
 		fill: var(--color-highlighted);
 	}
 
 	@nest .remove:hover & {
-		fill: var(--color-highlighted);
+		fill: var(--color-error);
 	}
 }
 
@@ -50,14 +50,13 @@
 	border-color: var(--color-border-light);
 	line-height: inherit;
 	font-size: inherit;
-	padding: 0 7px;
+	padding: 0 5px;
 	outline: 0;
 }
 
 .remove {
-	size: 11px 13px;
+	size: 18px 24px;
 	display: block;
-	position: absolute 50% 0 * *;
-	margin-top: calc(13px / 2 * -1);
+	position: absolute 0 0 * *;
 }
 

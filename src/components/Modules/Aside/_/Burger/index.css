@@ -11,10 +11,15 @@
 		cursor: pointer;
 		position: absolute 0 -55px * *;
 		background-color: var(--color-border);
-		transition: transform .3s ease 0s;
-		will-change: transform;
+		transition: transform .3s ease 0s, background-color .3s ease 0s;
+		will-change: transform, background-color;
+
+		&:hover {
+			background-color: var(--color-highlighted);
+		}
 
 		&.open {
+			box-shadow: -1px 0 0 0 var(--color-text-faint);
 			transform: translateX(-100%);
 		}
 	}
@@ -25,8 +30,8 @@
 	background-color: var(--color-text);
 	position: absolute 50% * * 50%;
 	transform: translate(-50%, -50%);
-	transition: opacity .3s ease 0s, transform .3s ease 0s;
-	will-change: opacity, transform;
+	transition: opacity .3s ease 0s, transform .3s ease 0s, background-color .3s ease 0s;
+	will-change: opacity, transform, background-color;
 
 	&:first-child {
 		margin-top: -6px;
@@ -35,11 +40,16 @@
 	&:last-child {
 		margin-top: 6px;
 	}
+
+	@nest .root:hover & {
+		background-color: #ffffff;
+	}
 }
 
 .open .line {
 	&:first-child {
 		transform: rotate(-45deg) translate(-50%, -50%);
+		margin-left: -2px;
 	}
 
 	&:nth-child(2) {
@@ -47,6 +57,7 @@
 	}
 
 	&:last-child {
-		transform: rotate(45deg) translate(-55%, -25%);
+		transform: rotate(45deg) translate(-50%, -50%);
+		margin-left: -3px;
 	}
 }

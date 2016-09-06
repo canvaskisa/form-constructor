@@ -2,34 +2,33 @@
 
 .root {
 	float: left;
-	size: 325px 24px;
-	overflow: hidden;
-	padding-right: 20px;
+	width: 315px;
+	min-height: 24px;
+	padding-right: 5px;
+	box-shadow: 1px 0 0 0 var(--color-border);
 
 	@media (--mobile) {
-		padding-right: 20px;
+		padding-right: 0;
 		margin-bottom: 5px;
 		width: 100%;
+		box-shadow: none;
 	}
 }
 
 .editable {
 	max-width: 100%;
-	display: inline-block;
-	vertical-align: top;
 	position: relative;
-	padding-right: 18px;
-	overflow: hidden;
-	height: 24px;
+	padding-right: 20px;
+	min-height: 24px;
 
 	@media (--mobile) {
-		padding-left: 30px;
+		padding-left: 35px;
 		padding-right: 18px;
 
 		&::before {
 			content: 'Title: ';
 			color: var(--color-text);
-			text: 11px 24px nowrap;
+			text: 12px 24px nowrap;
 			position: absolute 0 * * 0;
 		}
 	}
@@ -37,7 +36,7 @@
 
 .value {
 	color: var(--color-text);
-	text: 11px 24px nowrap;
+	text: 12px 24px;
 	overflow: hidden;
 
 	@nest .required &::after {
@@ -52,7 +51,8 @@
 	border: 1px solid;
 	border-color: var(--color-border-light);
 	color: var(--color-text);
-	size: 100% 24px;
-	padding: 0 7px;
-	text: 11px 24px nowrap;
+	size: calc(100% + 6px) 24px;
+	padding: 0 5px;
+	margin-left: -6px;
+	text: 12px 24px nowrap;
 }

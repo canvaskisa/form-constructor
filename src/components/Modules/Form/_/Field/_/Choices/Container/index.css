@@ -3,10 +3,18 @@
 .root {
 	float: left;
 	width: 200px;
-	padding-right: 20px;
+	padding-right: 5px;
+	padding-left: 10px;
+	margin-right: 10px;
+
+	@media (--tablet-vertical-min) {
+		border-left: 1px solid var(--color-border);
+		border-right: 1px solid var(--color-border);
+	}
 
 	@media (--mobile) {
 		width: 100%;
+		padding-left: 0;
 		padding-right: 0;
 		margin-bottom: 5px;
 	}

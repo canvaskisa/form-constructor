@@ -12,7 +12,7 @@
 	cursor: pointer;
 	size: 100% 52px;
 	color: var(--color-text-faint);
-	text: center 9px 52px nowrap;
+	text: center 12px 52px nowrap;
 	border-bottom: 2px solid transparent;
 	transition:
 		color .3s ease 0s,

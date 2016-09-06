@@ -22,6 +22,7 @@ export class Aside extends Component {
 		this.state = {activeIndex: 0, isShown: false};
 		this.handleViewChange = ::this.handleViewChange;
 		this.handleBurgerClick = ::this.handleBurgerClick;
+		this.handleFieldAdd = ::this.handleFieldAdd;
 	}
 
 	render() {
@@ -55,7 +56,7 @@ export class Aside extends Component {
 					{views[activeIndex].view === 'fields' ? (
 						<_.Fields
 							fields={fields}
-							onFieldClick={this.props.onFieldAdd}
+							onFieldClick={this.handleFieldAdd}
 							/>
 					) : (
 						<_.Textarea
@@ -66,6 +67,11 @@ export class Aside extends Component {
 				</div>
 			</aside>
 		);
+	}
+
+	handleFieldAdd(...args) {
+		this.setState({isShown: false});
+		this.props.onFieldAdd(...args);
 	}
 
 	handleViewChange(activeIndex) {

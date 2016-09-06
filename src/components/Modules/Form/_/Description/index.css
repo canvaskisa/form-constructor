@@ -8,19 +8,18 @@
 .caption {
 	color: var(--color-text-faint);
 	text-transform: uppercase;
+	margin-right: 5px;
+	float: left;
 }
 
 .value {
+	display: block;
+	overflow: hidden;
 	color: var(--color-text);
 }
 
 .root,
 .caption,
 .value {
-	text: 10px 12px nowrap;
-}
-
-.caption,
-.value {
-	display: inline;
+	text: 12px 1.2;
 }

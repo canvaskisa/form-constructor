@@ -3,7 +3,7 @@
 .root {
 	margin: 0;
 	size: 100% 45px;
-	text: 400 italic 10px 45px nowrap;
+	text: 400 italic 12px 45px nowrap;
 	color: var(--color-text-faint);
 	border-bottom: 1px solid var(--color-border);
 }

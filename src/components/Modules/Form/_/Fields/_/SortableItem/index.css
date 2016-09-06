@@ -11,10 +11,14 @@
 	& * {
 		visibility: inherit !important;
 	}
+
+	@media (--mobile) {
+		padding-bottom: 5px;
+	}
 }
 
 .root,
 .container {
-	overflow: hidden;
+	clear: fix;
 }
 

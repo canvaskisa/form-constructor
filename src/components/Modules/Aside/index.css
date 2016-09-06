@@ -23,6 +23,10 @@
 
 .container {
 	padding: 0 50px;
+
+	@media (--mobile) {
+		padding: 0 20px;
+	}
 }
 
 .fields {

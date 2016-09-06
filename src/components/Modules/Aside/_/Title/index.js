@@ -10,6 +10,7 @@ const Title = ({value, onChange}) => (
 			className={styles.editable}
 			valueClassName={styles.value}
 			inputClassName={styles.input}
+			iconClassName={styles.icon}
 			/>
 	</h1>
 );

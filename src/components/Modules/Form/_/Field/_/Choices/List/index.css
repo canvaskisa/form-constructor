@@ -1,12 +1,23 @@
 @import 'config.css';
 
+.root {
+	@media (--mobile) {
+		&::before {
+			content: 'Fields:';
+			display: block;
+			color: var(--color-text);
+			text: 12px 24px nowrap;
+		}
+	}
+}
+
 .button {
 	opacity: .6;
 	cursor: pointer;
 	color: var(--color-highlighted);
 	transition: opacity .3s ease 0s;
 	will-change: opacity;
-	text: 10px 24px nowrap;
+	text: 11px 24px nowrap;
 
 	&:hover {
 		opacity: 1;

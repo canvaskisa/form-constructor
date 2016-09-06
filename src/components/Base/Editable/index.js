@@ -13,7 +13,8 @@ class Editable extends Component {
 		onRemove: T.func,
 		className: T.string,
 		inputClassName: T.string,
-		valueClassName: T.string
+		valueClassName: T.string,
+		iconClassName: T.string
 	};
 
 	constructor(...args) {
@@ -53,7 +54,7 @@ class Editable extends Component {
 						/>
 				)}
 
-				{!isEditing && onRemove ? (
+				{onRemove ? (
 					<button type="button" className={styles.remove} onClick={onRemove}>
 						<svg viewBox="47 1 11 13" className={styles.icon}>
 							<path d="M56.842 3.286H54.77v-.572c0-.947-.695-1.714-1.554-1.714h-2.072c-.858 0-1.554.767-1.554 1.714v.572h-2.072c-.286 0-.518.256-.518.571 0 .316.232.572.518.572h.518v6.857c0 .947.695 1.714 1.554 1.714h5.18c.859 0 1.554-.767 1.554-1.714V4.429h.518c.286 0 .518-.256.518-.572 0-.315-.232-.571-.518-.571zm-6.216-.572c0-.315.232-.571.518-.571h2.072c.286 0 .518.256.518.571v.572h-3.108v-.572zm4.662 8.572c0 .315-.232.571-.518.571h-5.18c-.286 0-.518-.256-.518-.571V4.429h6.216v6.857z"/>
@@ -61,13 +62,11 @@ class Editable extends Component {
 					</button>
 				) : null}
 
-				{!isEditing ? (
-					<button type="button" onClick={this.handleEditingOpen} className={styles.edit}>
-						<svg className={styles.icon} viewBox="68 6 8 12">
-							<path d="M74.848 10.12l1.08-2.018L72.552 6l-.976 1.82-.324.607L68 14.494l.714 2.871 2.664-.77 3.25-6.066.22-.41zM69.2 16.455l-.476-1.913 2.252 1.401-1.776.512zm2.102-1.12l-2.252-1.4 2.763-5.158 2.251 1.402-2.762 5.157zm.836-7.165l.65-1.213 2.253 1.401-.652 1.213-2.251-1.4z"/>
-						</svg>
-					</button>
-				) : null}
+				<button type="button" onClick={this.handleEditingOpen} className={styles.edit}>
+					<svg className={cx(styles.icon, this.props.iconClassName)} viewBox="68 6 8 12">
+						<path d="M74.848 10.12l1.08-2.018L72.552 6l-.976 1.82-.324.607L68 14.494l.714 2.871 2.664-.77 3.25-6.066.22-.41zM69.2 16.455l-.476-1.913 2.252 1.401-1.776.512zm2.102-1.12l-2.252-1.4 2.763-5.158 2.251 1.402-2.762 5.157zm.836-7.165l.65-1.213 2.253 1.401-.652 1.213-2.251-1.4z"/>
+					</svg>
+				</button>
 			</div>
 		);
 	}

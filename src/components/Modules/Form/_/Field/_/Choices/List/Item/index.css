@@ -3,6 +3,16 @@
 .root {
 	size: 100% 24px;
 	position: relative;
+
+	@media (--mobile) {
+		border-top: 1px solid var(--color-border);
+		height: 25px;
+
+		&:last-of-type {
+			height: 26px;
+			border-bottom: 1px solid var(--color-border);
+		}
+	}
 }
 
 .checkbox,
@@ -40,11 +50,8 @@
 .root .editable {
 	min-height: 24px;
 	max-width: 100%;
-	display: inline-block;
-	vertical-align: top;
 	position: relative;
-	padding-right: 30px;
-	overflow: hidden;
+	padding-right: 40px;
 }
 
 .input {
@@ -52,13 +59,14 @@
 	border: 1px solid;
 	border-color: var(--color-border-light);
 	color: var(--color-text-faint);
-	size: 100% 24px;
-	padding: 0 7px;
-	text: 11px 24px nowrap;
+	size: calc(100% + 6px) 24px;
+	padding: 0 5px;
+	margin-left: -6px;
+	text: 12px 24px nowrap;
 }
 
 .value {
 	color: var(--color-text-faint);
-	text: 11px 24px nowrap;
+	text: 12px 24px nowrap;
 	overflow: hidden;
 }
