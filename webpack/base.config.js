@@ -17,7 +17,6 @@ module.exports = {
 			display: 'block'
 		}}),
 		require('postcss-initial'),
-		require('postcss-font-magician'),
 		require('postcss-cssnext'),
 		require('css-mqpacker')
 	],
