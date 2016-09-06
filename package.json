@@ -15,9 +15,10 @@
     "pretest": "npm run lint",
     "coverage": "nyc npm test",
     "coverage:report": "nyc report --reporter=html",
-    "precommit": "npm test",
     "deploy": "gh-pages -d dist",
-    "predeploy": "npm run build"
+    "predeploy": "npm run build",
+    "precommit": "npm test",
+    "postpush": "npm run deploy"
   },
   "keywords": [],
   "author": "Aleksandr Yakunichev <canvaskisa@gmail.com> (https://github.com/canvaskisa)",
@@ -68,6 +69,7 @@
     "eslint-config-xo-react": "0.9.0",
     "eslint-plugin-react": "6.2.0",
     "gh-pages": "0.11.0",
+    "husky": "0.11.7",
     "ip": "1.1.3",
     "nyc": "8.1.0",
     "react-addons-test-utils": "15.3.1",

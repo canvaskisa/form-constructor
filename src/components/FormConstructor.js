@@ -39,8 +39,6 @@ class FormConstructor extends Component {
 	}
 
 	handleSave() {
-		const state = this.store.getState();
-
 		if (this.props.onSave) {
 			this.props.onSave(this.store.getState());
 		}
