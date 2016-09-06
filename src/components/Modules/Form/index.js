@@ -12,7 +12,6 @@ class Form extends Component {
 		title: T.string.isRequired,
 		fields: T.array.isRequired,
 		onSave: T.func,
-		error: T.string.isRequired,
 		handleFieldsSort: T.func.isRequired,
 		handleFieldRemove: T.func.isRequired,
 		handleFieldTitleChange: T.func.isRequired,
@@ -23,7 +22,7 @@ class Form extends Component {
 	};
 
 	render() {
-		const {description, fields, error} = this.props;
+		const {description, fields} = this.props;
 
 		return (
 			<div className={styles.root}>
@@ -31,7 +30,6 @@ class Form extends Component {
 					<_.Title title={this.props.title}/>
 					{description ? <_.Description description={description}/> : null}
 					<_.Button onClick={this.props.onSave} children="Save form"/>
-					{error ? <_.ErrorMessage message={error}/> : null}
 
 					{fields.length ? (
 						<_.Table>
@@ -53,11 +51,10 @@ class Form extends Component {
 	}
 }
 
-export const stateToProps = ({description, title, fields, error}) => ({
+export const stateToProps = ({description, title, fields}) => ({
 	description,
 	title,
-	fields,
-	error
+	fields
 });
 
 export const dispatchToProps = dispatch => ({

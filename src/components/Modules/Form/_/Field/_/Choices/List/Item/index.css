@@ -18,7 +18,7 @@
 .checkbox,
 .radio,
 .select {
-	padding-left: 20px;
+	padding-left: 25px;
 
 	&::before {
 		content: '';
