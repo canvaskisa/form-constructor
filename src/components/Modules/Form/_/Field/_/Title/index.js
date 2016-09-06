@@ -7,6 +7,7 @@ class Title extends Component {
 	static displayName = 'FormConstructor/Modules/Form/Field/Title';
 
 	static propTypes = {
+		error: T.string,
 		id: T.string.isRequired,
 		title: T.string.isRequired,
 		onChange: T.func.isRequired,
@@ -19,6 +20,7 @@ class Title extends Component {
 	}
 
 	render() {
+		const {error} = this.props;
 		const classes = cx(styles.root, {
 			[styles.required]: this.props.required
 		});
@@ -32,6 +34,8 @@ class Title extends Component {
 					valueClassName={styles.value}
 					inputClassName={styles.input}
 					/>
+
+				{error ? <p className={styles.error}>{error}</p> : null}
 			</h2>
 		);
 	}

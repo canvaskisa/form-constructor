@@ -7,6 +7,7 @@ class Item extends Component {
 	static displayName = 'FormConstructor/Modules/Form/Field/Choices/List/Item';
 
 	static propTypes = {
+		error: T.string,
 		id: T.string.isRequired,
 		kind: T.string.isRequired,
 		title: T.string.isRequired,
@@ -21,6 +22,8 @@ class Item extends Component {
 	}
 
 	render() {
+		const {error} = this.props;
+
 		return (
 			<div className={cx(styles.root, styles[this.props.kind])}>
 				<Editable
@@ -31,6 +34,8 @@ class Item extends Component {
 					onChange={this.handleChange}
 					onRemove={this.handleRemove}
 					/>
+
+				{error ? <p className={styles.error}>{error}</p> : null}
 			</div>
 		);
 	}

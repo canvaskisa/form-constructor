@@ -11,6 +11,7 @@ class List extends Component {
 		onAdd: T.func.isRequired,
 		onItemChange: T.func.isRequired,
 		onItemRemove: T.func.isRequired,
+		error: T.string,
 		items: T.arrayOf(T.shape({
 			id: T.string.isRequired
 		}).isRequired).isRequired
@@ -24,7 +25,7 @@ class List extends Component {
 	}
 
 	render() {
-		const {kind} = this.props;
+		const {kind, error} = this.props;
 
 		return (
 			<div className={styles.root}>
@@ -37,6 +38,8 @@ class List extends Component {
 						onRemove={this.handleRemove}
 						/>
 				))}
+
+				{error ? <p className={styles.error}>{error}</p> : null}
 
 				<button
 					type="button"

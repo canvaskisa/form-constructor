@@ -3,6 +3,7 @@
 .root {
 	overflow: hidden;
 	padding-right: 120px;
+	min-height: 19px;
 
 	@media (--mobile) {
 		padding-left: 55px;

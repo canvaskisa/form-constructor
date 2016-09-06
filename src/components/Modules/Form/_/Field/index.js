@@ -10,7 +10,11 @@ class Field extends Component {
 		id: T.string.isRequired,
 		kind: T.string.isRequired,
 		title: T.string.isRequired,
-		choices: T.array,
+		choices: T.shape({
+			error: T.string,
+			items: T.array.isRequired
+		}),
+		error: T.string,
 		required: T.bool.isRequired,
 		onRemove: T.func.isRequired,
 		onTitleChange: T.func.isRequired,
@@ -27,6 +31,7 @@ class Field extends Component {
 			<div className={styles.root}>
 				<_.Title
 					id={id}
+					error={this.props.error}
 					title={this.props.title}
 					required={this.props.required}
 					onChange={this.props.onTitleChange}
@@ -41,7 +46,8 @@ class Field extends Component {
 						<_.Choices.List
 							id={id}
 							kind={this.props.kind}
-							items={this.props.choices}
+							items={this.props.choices.items}
+							error={this.props.choices.error}
 							onAdd={this.props.onChoiceAdd}
 							onItemChange={this.props.onChoiceUpdate}
 							onItemRemove={this.props.onChoiceRemove}

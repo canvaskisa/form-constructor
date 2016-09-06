@@ -23,3 +23,8 @@
 		opacity: 1;
 	}
 }
+
+.error {
+	text: 11px 11px;
+	color: var(--color-error);
+}

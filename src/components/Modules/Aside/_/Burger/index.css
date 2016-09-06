@@ -19,7 +19,7 @@
 		}
 
 		&.open {
-			box-shadow: -1px 0 0 0 var(--color-text-faint);
+			box-shadow: -1px 0 0 0 var(--color-border-light);
 			transform: translateX(-100%);
 		}
 	}

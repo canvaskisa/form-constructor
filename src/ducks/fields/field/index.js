@@ -13,11 +13,12 @@ export default (state = initialState, action) => {
 				required: false,
 				kind: action.kind,
 				title: action.kind,
-				choices: action.multi ? [] : null
+				choices: action.multi ? choices(undefined, {}) : null,
+				error: null
 			};
 
 		case constants.CHANGE_TITLE:
-			return state.id === action.id ? ({...state, title: action.title}) : state;
+			return state.id === action.id ? ({...state, title: action.title, error: action.title.trim() ? null : 'Cannot be empty'}) : state;
 
 		case constants.CHANGE_REQUIRED:
 			return state.id === action.id ? ({...state, required: action.required}) : state;
